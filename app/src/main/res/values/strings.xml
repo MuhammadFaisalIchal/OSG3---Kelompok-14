@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">OSG3Kelompok14</string>
+
+    <string name="hint_username">username</string>
+    <string name="hint_password">password</string>
+    <string name="txt_signin">SIGN IN</string>
+    <string name="txt_registerprompt">Don\'t have an account yet? Register</string>
 </resources>
