@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1089648641186",
+    "firebase_url": "https://eudeka-osg3-kelompok14-3bb9f.firebaseio.com",
+    "project_id": "eudeka-osg3-kelompok14-3bb9f",
+    "storage_bucket": "eudeka-osg3-kelompok14-3bb9f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089648641186:android:3d3932b08795c46b",
+        "android_client_info": {
+          "package_name": "id.eudeka.osg3kelompok14"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089648641186-hilos0ascuvvburbnhc49f87aumbgi9n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.eudeka.osg3kelompok14",
+            "certificate_hash": "0e72d3960a1fc0533479196cfe7ebf7973b9c4b2"
+          }
+        },
+        {
+          "client_id": "1089648641186-e4jmg8vvjfd0f5v0j286pfq7n5aa3hih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjTknw_eAJRLQiGm2MGRODTVSSLA3jXZo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089648641186-e4jmg8vvjfd0f5v0j286pfq7n5aa3hih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
