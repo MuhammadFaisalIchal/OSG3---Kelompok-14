@@ -1,7 +1,6 @@
 package id.eudeka.osg3kelompok14.data.local;
 
 import android.content.Context;
-import android.service.autofill.UserData;
 
 import java.util.List;
 
@@ -29,7 +28,7 @@ public class UserLocalDataSource implements UserDataSource {
     }
 
     @Override
-    public void getListUsers(GetUsersCallback callack) {
+    public void getListUsers(GetUsersCallback callback) {
 
     }
 }

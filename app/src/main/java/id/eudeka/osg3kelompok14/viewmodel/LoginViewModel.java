@@ -18,14 +18,14 @@ public class LoginViewModel {
         this.loginRepository = loginRepository;
     }
 
-    public void setNavigator(LoginNavigator mNavigator){
-        this.mNavigator= mNavigator;
+    public void setNavigator(LoginNavigator mNavigator) {
+        this.mNavigator = mNavigator;
     }
 
-    public void cekUser(final String email, final String password){
-        if (email.equals("") || password.equals("")){
+    public void cekUser(final String email, final String password) {
+        if (email.equals("") || password.equals("")) {
             mNavigator.loginFailed("Kolom email dan password harus diisi");
-        }else{
+        } else {
             loginRepository.doLogin(new LoginDataSource.TestLogin() {
                 @Override
                 public void dataAvailable(UserLoginRespon hasil) {

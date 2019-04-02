@@ -5,4 +5,5 @@
     <string name="hint_password">password</string>
     <string name="txt_signin">SIGN IN</string>
     <string name="txt_registerprompt">Don\'t have an account yet? Register</string>
+    <string name="cntdes_userspicture">User\'s Picture</string>
 </resources>
