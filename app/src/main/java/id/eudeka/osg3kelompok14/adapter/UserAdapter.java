@@ -17,16 +17,20 @@ import id.eudeka.osg3kelompok14.model.UserDataRespon;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
 
-//    private List<UserModel> listUser;
     private List<UserDataRespon> listUser;
+    private OnItemClickListener clickListener;
 
     public UserAdapter(List<UserDataRespon> listUser) {
         this.listUser = listUser;
     }
 
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        clickListener = listener;
+    }
+
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.user_row,viewGroup,false);
+        View itemView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.user_row, viewGroup, false);
         return new UserViewHolder(itemView);
     }
 
@@ -44,7 +48,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         return listUser.size();
     }
 
-    public class UserViewHolder extends RecyclerView.ViewHolder{
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public class UserViewHolder extends RecyclerView.ViewHolder {
 
         TextView txtFirstNameUser;
         ImageView imgUser;
@@ -53,6 +61,18 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             super(itemView);
             txtFirstNameUser = itemView.findViewById(R.id.txt_item_first_name);
             imgUser = itemView.findViewById(R.id.img_item_user);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (clickListener != null) {
+                        int position = getAdapterPosition();
+                        if (position != RecyclerView.NO_POSITION) {
+                            clickListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
 
         }
     }

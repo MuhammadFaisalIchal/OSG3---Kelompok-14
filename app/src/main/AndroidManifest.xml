@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".view.activity.login.LoginActivity"></activity>
+        <activity android:name=".view.activity.main.UserDetailActivity"></activity>
+        <activity android:name=".view.activity.login.LoginActivity" />
         <activity
             android:name=".view.activity.register.RegistrationActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".view.activity.main.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

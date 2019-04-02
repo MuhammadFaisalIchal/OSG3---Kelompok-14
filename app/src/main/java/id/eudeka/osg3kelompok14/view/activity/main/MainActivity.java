@@ -23,13 +23,15 @@ import id.eudeka.osg3kelompok14.view.activity.login.LoginActivity;
 import id.eudeka.osg3kelompok14.viewmodel.UserViewModel;
 import id.eudeka.osg3kelompok14.widget.Common;
 
-public class MainActivity extends AppCompatActivity implements UserNavigator {
+public class MainActivity extends AppCompatActivity implements UserNavigator, UserAdapter.OnItemClickListener {
 
     private UserViewModel mUserViewModel;
     private RecyclerView recUser;
 
     private UserAdapter adapter;
     private List<UserDataRespon> dataListUser;
+
+    public static final String EXTRA_IMG = "ext_img", EXTRA_FNAME = "ext_fname", EXTRA_LNAME = "ext_lname";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,11 +49,11 @@ public class MainActivity extends AppCompatActivity implements UserNavigator {
 
     private void initAdapter() {
         adapter = new UserAdapter(dataListUser);
+        adapter.setOnItemClickListener(MainActivity.this);
         recUser.setLayoutManager(new LinearLayoutManager(this));
         recUser.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recUser.setAdapter(adapter);
     }
-
 
     @Override
     public void loadListUser(List<UserDataRespon> listUser) {
@@ -80,5 +82,17 @@ public class MainActivity extends AppCompatActivity implements UserNavigator {
             finish();
         }
         Toast.makeText(this, "" + Prefs.getString(Common.TOKEN, ""), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onItemClick(int position) {
+        Intent detailIntent = new Intent(this, UserDetailActivity.class);
+        UserDataRespon dataRespon = dataListUser.get(position);
+
+        detailIntent.putExtra(EXTRA_IMG, dataRespon.getAvatar());
+        detailIntent.putExtra(EXTRA_FNAME, dataRespon.getFirstName());
+        detailIntent.putExtra(EXTRA_LNAME, dataRespon.getLastName());
+
+        startActivity(detailIntent);
     }
 }
