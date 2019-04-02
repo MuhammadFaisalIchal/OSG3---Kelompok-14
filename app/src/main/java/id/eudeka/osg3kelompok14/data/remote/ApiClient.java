@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
     private static Retrofit retrofit= null;
-    private static String url= "https://www.url.com";
+    private static String url= "https://reqres.in/api/";
 
     public static Retrofit getClient(){
         retrofit= new Retrofit.Builder()

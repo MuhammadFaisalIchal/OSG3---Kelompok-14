@@ -4,104 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".view.activity.MainActivity">
-
-    <ImageView
-        android:id="@+id/iv_eudeka"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/iv_eudeka"
-        tools:ignore="ContentDescription" />
-
-    <LinearLayout
-        android:id="@+id/lin_username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="30dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_person"
-            tools:ignore="ContentDescription" />
-
-        <EditText
-            android:id="@+id/inputUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/bg_edittext"
-            android:hint="@string/hint_username"
-            android:inputType="text"
-            android:paddingStart="16dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="0dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/input_signin"
-            android:textColorHint="@color/input_signinhint"
-            android:textStyle="italic"
-            tools:ignore="Autofill" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/lin_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lin_username"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_lock"
-            tools:ignore="ContentDescription" />
-
-        <EditText
-            android:id="@+id/inputPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:background="@drawable/bg_edittext"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
-            android:paddingStart="16dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="0dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/input_signin"
-            android:textColorHint="@color/input_signinhint"
-            android:textStyle="italic"
-            tools:ignore="Autofill" />
-
-    </LinearLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/lin_password"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="30dp"
-        android:background="@drawable/btn_grdbluepurple"
-        android:text="@string/txt_signin"
-        android:textColor="@color/white" />
+    tools:context=".view.activity.main.MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal"
-        android:padding="16dp"
-        android:text="@string/txt_registerprompt" />
+        android:id="@+id/maintitle"
+        android:text="Main Activity Source"
+        android:textSize="30sp"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

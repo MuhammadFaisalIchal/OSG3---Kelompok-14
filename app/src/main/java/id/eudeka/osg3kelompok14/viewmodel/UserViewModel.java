@@ -4,7 +4,6 @@ import android.content.Context;
 
 import id.eudeka.osg3kelompok14.data.UserRepository;
 import id.eudeka.osg3kelompok14.navigator.UserNavigator;
-import id.eudeka.osg3kelompok14.view.activity.MainActivity;
 
 public class UserViewModel {
 
